@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\my_dotnet\\MoviesAPI\\MoviesAPI.csproj": {}
+    "C:\\Users\\nhnam5\\Documents\\API-web-server\\MoviesAPI.csproj": {}
   },
   "projects": {
-    "D:\\my_dotnet\\MoviesAPI\\MoviesAPI.csproj": {
+    "C:\\Users\\nhnam5\\Documents\\API-web-server\\MoviesAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\my_dotnet\\MoviesAPI\\MoviesAPI.csproj",
+        "projectUniqueName": "C:\\Users\\nhnam5\\Documents\\API-web-server\\MoviesAPI.csproj",
         "projectName": "MoviesAPI",
-        "projectPath": "D:\\my_dotnet\\MoviesAPI\\MoviesAPI.csproj",
+        "projectPath": "C:\\Users\\nhnam5\\Documents\\API-web-server\\MoviesAPI.csproj",
         "packagesPath": "C:\\Users\\nhnam5\\.nuget\\packages\\",
-        "outputPath": "D:\\my_dotnet\\MoviesAPI\\obj\\",
+        "outputPath": "C:\\Users\\nhnam5\\Documents\\API-web-server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -45,7 +45,25 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.0, )"
             },

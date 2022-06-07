@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -30,11 +31,16 @@ namespace MoviesAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddDbContext<ApplicationDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            });
             services.AddControllers(option =>
             {
                 option.Filters.Add(typeof(MyExceptionFilter));
-            }).AddXmlDataContractSerializerFormatters();
+            })
+                .AddNewtonsoftJson()
+                .AddXmlDataContractSerializerFormatters();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MoviesAPI", Version = "v1" });
@@ -44,30 +50,33 @@ namespace MoviesAPI
             services.AddSingleton<IRepository, InMemoryRepository>();
             services.AddTransient<MyActionFilter>();
             services.AddTransient<IHostedService, WriteToFileHostedService>();
+            services.AddAutoMapper(typeof(Startup));
+            //services.AddTransient<IFileStorageService, InAppStorageService>();
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
-            app.Use(async (context, next) =>
-            {
-                using (var swapStream = new MemoryStream())
-                {
-                    var originalResponseBody = context.Response.Body;
-                    context.Response.Body = swapStream;
+            //app.Use(async (context, next) =>
+            //{
+            //    using (var swapStream = new MemoryStream())
+            //    {
+            //        var originalResponseBody = context.Response.Body;
+            //        context.Response.Body = swapStream;
 
-                    await next.Invoke();
+            //        await next.Invoke();
 
-                    swapStream.Seek(0, SeekOrigin.Begin);
-                    string responseBody = new StreamReader(swapStream).ReadToEnd();
-                    swapStream.Seek(0, SeekOrigin.Begin);
+            //        swapStream.Seek(0, SeekOrigin.Begin);
+            //        string responseBody = new StreamReader(swapStream).ReadToEnd();
+            //        swapStream.Seek(0, SeekOrigin.Begin);
 
-                    await swapStream.CopyToAsync(originalResponseBody);
-                    context.Response.Body = originalResponseBody;
+            //        await swapStream.CopyToAsync(originalResponseBody);
+            //        context.Response.Body = originalResponseBody;
 
-                    logger.LogInformation(responseBody);
-                }
-            });
+            //        logger.LogInformation(responseBody);
+            //    }
+            //});
 
             if (env.IsDevelopment())
             {
@@ -77,6 +86,8 @@ namespace MoviesAPI
             }
 
             app.UseHttpsRedirection();
+
+            app.UseStaticFiles();
 
             app.UseRouting();
 

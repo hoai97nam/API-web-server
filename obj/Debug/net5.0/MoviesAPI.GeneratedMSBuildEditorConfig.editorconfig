@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = MoviesAPI
-build_property.ProjectDir = D:\my_dotnet\MoviesAPI\
+build_property.ProjectDir = C:\Users\nhnam5\Documents\API-web-server\
