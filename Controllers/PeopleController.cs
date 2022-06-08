@@ -119,7 +119,7 @@ namespace MoviesAPI.Controllers
             return new NoContentResult();
         }
 
-        [HttpDelete("{id")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
             var exists = await _context.People.AnyAsync(x => x.Id == id);

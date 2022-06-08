@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nhnam5\\Documents\\API-web-server\\MoviesAPI.csproj": {}
+    "C:\\Users\\nhnam\\Documents\\API-web-server\\MoviesAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nhnam5\\Documents\\API-web-server\\MoviesAPI.csproj": {
+    "C:\\Users\\nhnam\\Documents\\API-web-server\\MoviesAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nhnam5\\Documents\\API-web-server\\MoviesAPI.csproj",
+        "projectUniqueName": "C:\\Users\\nhnam\\Documents\\API-web-server\\MoviesAPI.csproj",
         "projectName": "MoviesAPI",
-        "projectPath": "C:\\Users\\nhnam5\\Documents\\API-web-server\\MoviesAPI.csproj",
-        "packagesPath": "C:\\Users\\nhnam5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nhnam5\\Documents\\API-web-server\\obj\\",
+        "projectPath": "C:\\Users\\nhnam\\Documents\\API-web-server\\MoviesAPI.csproj",
+        "packagesPath": "C:\\Users\\nhnam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nhnam\\Documents\\API-web-server\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\nhnam5\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\nhnam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,11 +46,11 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[3.1.25, )"
             },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[3.1.25, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -66,6 +61,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.3.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -94,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
