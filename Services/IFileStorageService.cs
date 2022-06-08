@@ -7,8 +7,8 @@ namespace MoviesAPI.Services
 {
     public interface IFileStorageService
     {
-        public Task<string> EditFile(byte[] content, string extension, string containerName, string fileRoute);
+        public Task<string> EditFile(byte[] content, string extension, string containerName, string fileRoute, string contentType);
         public Task DeleteFile(string fileRoute, string containerName);
-        public Task<string> Save(byte[] content, string extension, string containerName);
+        public Task<string> SaveFile(byte[] content, string extension, string containerName, string contentType);
     }
 }

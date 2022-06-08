@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kkSXVMx8wX13intWN2TQ4NJpKEmCQUQjUW87BMh9v0gALc29nv6vwgFIHl4ZWkdm7PGjP8YG8vpM34xq1PcI5A==",
+  "dgSpecHash": "+ckfjN850Y+w+kKhuEvhoJ6ti064mw5wSZgV44upYNmaJP/mLfgnsdwIOTTTjZdHppbcWDM00ydSCovVmilrPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\nhnam5\\Documents\\API-web-server\\MoviesAPI.csproj",
   "expectedPackageFiles": [
@@ -70,8 +70,11 @@
     "C:\\Users\\nhnam5\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\nhnam5\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\nhnam5\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\nhnam5\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
+    "C:\\Users\\nhnam5\\.nuget\\packages\\system.linq.queryable\\4.3.0\\system.linq.queryable.4.3.0.nupkg.sha512",
     "C:\\Users\\nhnam5\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\nhnam5\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\nhnam5\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\nhnam5\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",
     "C:\\Users\\nhnam5\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",
     "C:\\Users\\nhnam5\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
